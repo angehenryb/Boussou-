@@ -1,0 +1,123 @@
+/* Boussou – style commun à toutes les pages */
+:root{--encre:#12263a;--texte2:#52667a;--accent:#0a6ea8;--accent2:#085a8a;--gris:#f3f6f9;--bord:#dbe3ea;--img:url(plage.jpg)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--encre);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--bord);background:#fff;position:sticky;top:0;z-index:5}
+.barre{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:2px 24px;padding-top:calc(12px + env(safe-area-inset-top,0px));padding-bottom:6px}
+.logo{font-size:1.4rem;font-weight:700;color:var(--encre);text-decoration:none;letter-spacing:-.01em}
+nav{display:flex;flex-wrap:wrap;gap:0 20px}
+nav a{color:var(--texte2);text-decoration:none;font-weight:600;font-size:.95rem;padding:6px 0;border-bottom:2px solid transparent}
+nav a:hover{color:var(--accent)}
+nav a.actif{color:var(--encre);border-bottom-color:var(--accent)}
+.btn{display:inline-block;text-decoration:none;background:var(--accent);color:#fff;font-weight:600;font-size:.95rem;padding:11px 22px;border-radius:8px;border:1.5px solid var(--accent);transition:background .15s,color .15s;cursor:pointer;font-family:inherit}
+.btn:hover{background:var(--accent2)}
+.btn.grand{font-size:1.05rem;padding:14px 28px}
+.btn.ghost{background:transparent;color:var(--accent)}
+.btn.ghost:hover{background:var(--accent);color:#fff}
+.hero{padding:40px 20px 48px}
+.hero.petit{padding:36px 20px 8px}
+h1{font-size:clamp(2rem,6.2vw,3.2rem);line-height:1.12;font-weight:700;letter-spacing:-.02em;max-width:18ch}
+.sub{color:var(--texte2);font-size:1.1rem;max-width:50ch;margin:14px 0 24px}
+.petit .sub{margin-bottom:0}
+.photo{margin-top:34px}
+.photo img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:45% 80%;border-radius:14px}
+@media(min-width:760px){.photo img{aspect-ratio:16/8;object-position:50% 72%}}
+section{padding:48px 0}
+.gris{background:var(--gris)}
+h2{font-size:clamp(1.6rem,4.5vw,2.1rem);font-weight:700;letter-spacing:-.015em;line-height:1.2;margin-bottom:22px}
+.cartes{display:grid;gap:20px}
+@media(min-width:800px){.cartes{grid-template-columns:1fr 1fr}.cartes.trois{grid-template-columns:1fr 1fr 1fr}}
+.carte{background:#fff;border:1px solid var(--bord);border-radius:14px;padding:22px}
+.carte h3{font-size:1.35rem;font-weight:700}
+.carte p{color:var(--texte2);margin:6px 0 16px}
+.vignette{aspect-ratio:16/10;border-radius:10px;background-image:var(--img);background-repeat:no-repeat;margin-bottom:16px;background-color:#cfe3ee}
+.tete{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.etiquette{background:#e5f1f8;color:var(--accent2);font-weight:700;font-size:.78rem;padding:3px 10px;border-radius:20px}
+.specs{display:grid;grid-template-columns:1fr 1fr;gap:12px 16px;margin-bottom:14px}
+.specs dt{font-size:.8rem;color:var(--texte2)}
+.specs dd{font-weight:700}
+.ligne{display:flex;align-items:center;gap:12px;padding:12px 0;border-top:1px solid var(--bord)}
+.ligne .nom{flex:1;font-weight:600}
+.ligne .prix{font-weight:700}
+.ligne a{border:1.5px solid var(--accent);color:var(--accent);text-decoration:none;font-weight:600;font-size:.88rem;padding:7px 14px;border-radius:8px;transition:background .15s,color .15s}
+.ligne a:hover{background:var(--accent);color:#fff}
+.etapes{display:grid;gap:26px}
+@media(min-width:800px){.etapes{grid-template-columns:repeat(3,1fr)}}
+.etape b{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--accent);color:#fff;margin-bottom:10px}
+.etape h3{font-size:1.1rem}
+.etape p{color:var(--texte2)}
+.etroit{max-width:640px}
+details{border:1px solid var(--bord);border-radius:10px;margin-bottom:10px;background:#fff}
+summary{cursor:pointer;font-weight:600;padding:16px 18px}
+details p{padding:0 18px 16px;color:var(--texte2)}
+.champ{display:grid;gap:6px;margin-bottom:16px}
+label{font-weight:600;font-size:.95rem}
+input,select,textarea{font:inherit;padding:12px;border:1px solid var(--bord);border-radius:8px;background:#fff;color:var(--encre);width:100%}
+textarea{min-height:110px}
+.ou{margin-top:18px;color:var(--texte2)}
+.ou a{color:var(--accent);font-weight:600}
+footer{background:var(--encre);color:#b9c7d4;text-align:center;padding:24px 20px calc(24px + env(safe-area-inset-bottom,0px));font-size:.9rem}
+.zonebox{display:grid;gap:28px;align-items:center}
+@media(min-width:800px){.zonebox{grid-template-columns:1fr 1fr}}
+svg.ci{width:100%;height:auto;max-width:460px;margin:0 auto;display:block;border:1px solid var(--bord);border-radius:14px;background:#eef2f6}
+.liste-zone{list-style:none;display:grid;gap:10px;margin:10px 0 18px}
+.liste-zone li{padding-left:24px;position:relative}
+.liste-zone li::before{content:"";position:absolute;left:0;top:.55em;width:10px;height:10px;border-radius:50%;background:var(--accent)}
+.mini{font-size:.85rem;color:var(--texte2)}
+.onglets{display:flex;gap:8px;max-width:440px;margin-bottom:14px}
+.onglets button{flex:1;padding:12px 10px;border:1.5px solid var(--accent);background:#fff;color:var(--accent);font:600 1rem Inter,system-ui,sans-serif;border-radius:10px;cursor:pointer}
+.onglets button[aria-selected=true]{background:var(--accent);color:#fff}
+.intro-cat{color:var(--texte2);margin-bottom:22px}
+.carte.large{grid-column:1/-1}
+@media(min-width:800px){.large .specs{grid-template-columns:repeat(3,1fr)}}
+.titre-int{font-size:1rem;margin:6px 0 10px}
+.galerie{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;margin-bottom:12px}
+.tuile{flex:0 0 68%;max-width:270px;scroll-snap-align:start;border:1px solid var(--bord);border-radius:10px;overflow:hidden;background:#fff}
+.tuile .ph{aspect-ratio:4/3;background:#e8f0f5 center/cover;display:grid;place-items:center;color:var(--texte2);font-size:.82rem}
+.tuile figcaption{padding:9px 12px;font-weight:600}
+
+/* Météo */
+.meteo-jours{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:16px}
+.mj{border:1.5px solid var(--bord);background:#fff;border-radius:10px;padding:10px 4px;text-align:center;cursor:pointer;font:inherit;color:var(--encre);display:grid;gap:2px;justify-items:center}
+.mj[aria-pressed=true]{border-color:var(--accent);background:#e5f1f8}
+.mj .j{font-weight:700;font-size:.85rem;text-transform:capitalize}
+.mj .ic{font-size:1.7rem;line-height:1.2}
+.mj .t{font-weight:700}
+.mj .p{font-size:.78rem;color:var(--texte2)}
+.verdict{padding:14px 16px;border-radius:10px;font-weight:700;margin-bottom:14px}
+.verdict small{display:block;font-weight:400;margin-top:4px}
+.v0{background:#e6f5ec;color:#16643a}.v1{background:#fff4dd;color:#7a5200}.v2{background:#fde8e8;color:#8f1d1d}
+.mdet{display:grid;gap:20px}
+@media(min-width:800px){.mdet{grid-template-columns:1fr 1fr}}
+.mdet .carte p{margin:0}
+.chiffres{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px}
+.chiffres dt{font-size:.8rem;color:var(--texte2)}
+.chiffres dd{font-weight:700}
+.prevoir{list-style:none;display:grid;gap:8px}
+.prevoir li{padding-left:24px;position:relative}
+.prevoir li::before{content:"\2713";position:absolute;left:0;color:var(--accent);font-weight:700}
+
+/* En-tête : logo + bouton Menu sur mobile, menu horizontal sur grand écran */
+.barre{padding-bottom:10px}
+.menu-btn{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1.5px solid var(--bord);border-radius:8px;padding:8px 14px;font:600 .95rem Inter,system-ui,sans-serif;color:var(--encre);cursor:pointer}
+.menu-btn::after{content:"\25BE"}
+.menu-btn[aria-expanded=true]::after{content:"\25B4"}
+.menu-btn:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+@media(max-width:799px){
+  nav{display:none;flex-direction:column;flex-basis:100%;gap:0;padding:6px 0 4px}
+  nav.ouvert{display:flex}
+  nav a{padding:14px 2px;font-size:1.05rem;border-bottom:1px solid var(--bord)}
+  nav a:last-child{border-bottom:0}
+  nav a.actif{color:var(--accent);border-bottom-color:var(--bord)}
+}
+@media(min-width:800px){.menu-btn{display:none}}
+
+/* Horaires bien visibles */
+.barre-h{background:var(--accent2);color:#fff;font-size:.92rem;font-weight:600;text-align:center;padding:9px 16px;display:flex;flex-wrap:wrap;justify-content:center;gap:2px 20px}
+.heure{display:inline-block;background:#e5f1f8;color:var(--accent2);font-weight:700;font-size:1rem;padding:6px 14px;border-radius:20px;margin:2px 0 10px}
+.carte .heure{margin-bottom:12px}
+.encart-h{display:grid;gap:2px;border:1.5px solid var(--accent);background:#e5f1f8;border-radius:12px;padding:14px 16px;margin:0 0 22px;font-weight:600;color:var(--encre)}
+.encart-h b{font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent2)}

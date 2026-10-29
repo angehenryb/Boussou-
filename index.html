@@ -1,46 +1,44 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Boussou – Location de bateaux</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: Arial, sans-serif; color: #12324a; line-height: 1.6; }
-    nav { background: #0b5c8a; display: flex; flex-wrap: wrap;
-          justify-content: center; gap: 6px 18px; padding: 14px; }
-    nav a { color: #fff; text-decoration: none; font-weight: bold; }
-    .hero { background: linear-gradient(#0b5c8a, #2aa1d4); color: #fff;
-            text-align: center; padding: 70px 20px; }
-    .hero h1 { font-size: 2.4rem; margin-bottom: 10px; }
-    .btn { display: inline-block; margin-top: 20px; padding: 14px 28px;
-           background: #ffb703; color: #12324a; border-radius: 30px;
-           text-decoration: none; font-weight: bold; }
-    section { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
-    h2 { margin-bottom: 12px; color: #0b5c8a; }
-    footer { background: #12324a; color: #fff; text-align: center; padding: 20px; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Boussou – Location de jet-skis et de yachts</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
-    <a href="index.html">Accueil</a>
-    <a href="flotte.html">Flotte</a>
-    <a href="infos.html">Infos pratiques</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <div class="hero">
-    <h1>Boussou</h1>
-    <p>Louez un bateau et partez à l'aventure.</p>
-    <a class="btn" href="contact.html">Réserver</a>
+<header><div class="wrap barre"><a class="logo" href="index.html">Boussou</a><button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button><nav id="nav" aria-label="Navigation principale"><a href="index.html" class="actif">Accueil</a><a href="flotte.html">Flotte</a><a href="meteo.html">Météo</a><a href="carte.html">Carte</a><a href="infos.html">Infos pratiques</a><a href="contact.html">Contact</a></nav></div></header>
+<div class="barre-h"><span>Jet-skis : 9 h – 17 h</span><span>Yachts : disponibles à tout moment</span></div>
+<main>
+<div class="wrap hero">
+  <h1>Jet-skis et yachts, réservés en quelques minutes.</h1>
+  <p class="sub">Choisissez votre bateau, puis envoyez votre demande sur WhatsApp. Nous confirmons la disponibilité.</p>
+  <a class="btn grand" href="flotte.html">Voir nos bateaux</a>
+  <div class="photo"><img src="plage.jpg" alt="Plage de sable blanc avec trois jet-skis, deux yachts sur une eau turquoise et des palmiers" fetchpriority="high"></div>
+</div>
+<section class="gris"><div class="wrap">
+  <h2>Deux façons de naviguer</h2>
+  <div class="cartes">
+    <article class="carte"><h3>Jet-ski</h3><span class="heure">🕘 9 h – 17 h</span><p>Sensations fortes sur l’eau turquoise. Casque et gilet fournis.</p><a class="btn ghost" href="flotte.html">Voir les jet-skis</a></article>
+    <article class="carte"><h3>Yacht</h3><span class="heure">🕘 À tout moment</span><p>Une sortie en mer confortable, entre amis ou en famille.</p><a class="btn ghost" href="flotte.html">Voir le yacht</a></article>
   </div>
-
-  <section>
-    <h2>Bienvenue</h2>
-    <p>Boussou vous propose la location de bateaux, avec réservation simple et rapide. Découvrez notre flotte et choisissez celui qui vous convient.</p>
-  </section>
-
-  <footer>© 2026 Boussou</footer>
+</div></section>
+<section><div class="wrap">
+  <h2>Où naviguer ?</h2>
+  <p class="sub" style="margin-top:0">Nos bateaux circulent dans le périmètre d’Assinie, sur la côte est de la Côte d’Ivoire.</p>
+  <a class="btn ghost" href="carte.html">Voir la carte</a>
+</div></section>
+<section class="gris"><div class="wrap">
+  <h2>Comment réserver</h2>
+  <div class="etapes">
+    <div class="etape"><b>1</b><h3>Choisissez</h3><p>Votre bateau et la durée souhaitée.</p></div>
+    <div class="etape"><b>2</b><h3>Envoyez</h3><p>Votre demande part sur WhatsApp, déjà rédigée.</p></div>
+    <div class="etape"><b>3</b><h3>Embarquez</h3><p>Nous confirmons, puis vous profitez de la mer.</p></div>
+  </div>
+</div></section>
+</main>
+<footer>© 2026 Boussou · Location de jet-skis et de yachts</footer>
+<script src="script.js"></script>
 </body>
 </html>

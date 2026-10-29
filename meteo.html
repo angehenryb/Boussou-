@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Météo à Assinie – Boussou</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="wrap barre"><a class="logo" href="index.html">Boussou</a><button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button><nav id="nav" aria-label="Navigation principale"><a href="index.html">Accueil</a><a href="flotte.html">Flotte</a><a href="meteo.html" class="actif">Météo</a><a href="carte.html">Carte</a><a href="infos.html">Infos pratiques</a><a href="contact.html">Contact</a></nav></div></header>
+<div class="barre-h"><span>Jet-skis : 9 h – 17 h</span><span>Yachts : disponibles à tout moment</span></div>
+<main>
+<div class="wrap hero petit">
+  <h1>Météo à Assinie</h1>
+  <p class="sub">Prévisions des 4 prochains jours : choisissez votre date, voyez les conditions en mer et ce qu’il faut prévoir avant de réserver.</p>
+</div>
+<section id="meteo"><div class="wrap">
+  <div class="meteo-jours" id="meteo-jours" role="group" aria-label="Choisir un jour"><p class="mini">Chargement des prévisions…</p></div>
+  <div id="meteo-detail" aria-live="polite"></div>
+  <p class="mini" style="margin-top:14px">Prévisions indicatives (source : Open-Meteo). Pour votre sécurité, Boussou décide en dernier ressort de maintenir ou de reporter une sortie.</p>
+</div></section>
+</main>
+<footer>© 2026 Boussou · Location de jet-skis et de yachts</footer>
+<script src="script.js"></script>
+</body>
+</html>
