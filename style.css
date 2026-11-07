@@ -1,5 +1,5 @@
 /* Boussou – style commun à toutes les pages */
-:root{--encre:#12263a;--texte2:#52667a;--accent:#0a6ea8;--accent2:#085a8a;--gris:#f3f6f9;--bord:#dbe3ea;--img:url(plage.jpg)}
+:root{--encre:#12263a;--texte2:#5b6470;--accent:#0f2a47;--accent2:#0a1d33;--gris:#f5f5f6;--bord:#e2e4e7;--img:url(plage.jpg)}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--encre);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
@@ -33,9 +33,9 @@ h2{font-size:clamp(1.6rem,4.5vw,2.1rem);font-weight:700;letter-spacing:-.015em;l
 .carte{background:#fff;border:1px solid var(--bord);border-radius:14px;padding:22px}
 .carte h3{font-size:1.35rem;font-weight:700}
 .carte p{color:var(--texte2);margin:6px 0 16px}
-.vignette{aspect-ratio:16/10;border-radius:10px;background-image:var(--img);background-repeat:no-repeat;margin-bottom:16px;background-color:#cfe3ee}
+.vignette{aspect-ratio:16/10;border-radius:10px;background-image:var(--img);background-repeat:no-repeat;margin-bottom:16px;background-color:#e4e6e9}
 .tete{display:flex;align-items:center;gap:10px;margin-bottom:14px}
-.etiquette{background:#e5f1f8;color:var(--accent2);font-weight:700;font-size:.78rem;padding:3px 10px;border-radius:20px}
+.etiquette{background:#eeeff1;color:var(--accent2);font-weight:700;font-size:.78rem;padding:3px 10px;border-radius:20px}
 .specs{display:grid;grid-template-columns:1fr 1fr;gap:12px 16px;margin-bottom:14px}
 .specs dt{font-size:.8rem;color:var(--texte2)}
 .specs dd{font-weight:700}
@@ -59,10 +59,10 @@ input,select,textarea{font:inherit;padding:12px;border:1px solid var(--bord);bor
 textarea{min-height:110px}
 .ou{margin-top:18px;color:var(--texte2)}
 .ou a{color:var(--accent);font-weight:600}
-footer{background:var(--encre);color:#b9c7d4;text-align:center;padding:24px 20px calc(24px + env(safe-area-inset-bottom,0px));font-size:.9rem}
+footer{background:var(--encre);color:#c3c7cc;text-align:center;padding:24px 20px calc(24px + env(safe-area-inset-bottom,0px));font-size:.9rem}
 .zonebox{display:grid;gap:28px;align-items:center}
 @media(min-width:800px){.zonebox{grid-template-columns:1fr 1fr}}
-svg.ci{width:100%;height:auto;max-width:460px;margin:0 auto;display:block;border:1px solid var(--bord);border-radius:14px;background:#eef2f6}
+svg.ci{width:100%;height:auto;max-width:460px;margin:0 auto;display:block;border:1px solid var(--bord);border-radius:14px;background:#eff0f2}
 .liste-zone{list-style:none;display:grid;gap:10px;margin:10px 0 18px}
 .liste-zone li{padding-left:24px;position:relative}
 .liste-zone li::before{content:"";position:absolute;left:0;top:.55em;width:10px;height:10px;border-radius:50%;background:var(--accent)}
@@ -76,13 +76,13 @@ svg.ci{width:100%;height:auto;max-width:460px;margin:0 auto;display:block;border
 .titre-int{font-size:1rem;margin:6px 0 10px}
 .galerie{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;margin-bottom:12px}
 .tuile{flex:0 0 68%;max-width:270px;scroll-snap-align:start;border:1px solid var(--bord);border-radius:10px;overflow:hidden;background:#fff}
-.tuile .ph{aspect-ratio:4/3;background:#e8f0f5 center/cover;display:grid;place-items:center;color:var(--texte2);font-size:.82rem}
+.tuile .ph{aspect-ratio:4/3;background:#ecedef center/cover;display:grid;place-items:center;color:var(--texte2);font-size:.82rem}
 .tuile figcaption{padding:9px 12px;font-weight:600}
 
 /* Météo */
 .meteo-jours{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:16px}
 .mj{border:1.5px solid var(--bord);background:#fff;border-radius:10px;padding:10px 4px;text-align:center;cursor:pointer;font:inherit;color:var(--encre);display:grid;gap:2px;justify-items:center}
-.mj[aria-pressed=true]{border-color:var(--accent);background:#e5f1f8}
+.mj[aria-pressed=true]{border-color:var(--accent);background:#eeeff1}
 .mj .j{font-weight:700;font-size:.85rem;text-transform:capitalize}
 .mj .ic{font-size:1.7rem;line-height:1.2}
 .mj .t{font-weight:700}
@@ -117,7 +117,120 @@ svg.ci{width:100%;height:auto;max-width:460px;margin:0 auto;display:block;border
 
 /* Horaires bien visibles */
 .barre-h{background:var(--accent2);color:#fff;font-size:.92rem;font-weight:600;text-align:center;padding:9px 16px;display:flex;flex-wrap:wrap;justify-content:center;gap:2px 20px}
-.heure{display:inline-block;background:#e5f1f8;color:var(--accent2);font-weight:700;font-size:1rem;padding:6px 14px;border-radius:20px;margin:2px 0 10px}
+.heure{display:inline-block;background:#eeeff1;color:var(--accent2);font-weight:700;font-size:1rem;padding:6px 14px;border-radius:20px;margin:2px 0 10px}
 .carte .heure{margin-bottom:12px}
-.encart-h{display:grid;gap:2px;border:1.5px solid var(--accent);background:#e5f1f8;border-radius:12px;padding:14px 16px;margin:0 0 22px;font-weight:600;color:var(--encre)}
+.encart-h{display:grid;gap:2px;border:1.5px solid var(--accent);background:#eeeff1;border-radius:12px;padding:14px 16px;margin:0 0 22px;font-weight:600;color:var(--encre)}
 .encart-h b{font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent2)}
+
+/* Comptes clients */
+[hidden]{display:none!important}
+.etat{display:inline-block;padding:3px 10px;border-radius:20px;font-size:.82rem;font-weight:700;margin:2px 0 8px}
+.etroit .onglets{margin-bottom:20px}
+
+/* Yachts : cartes courtes et fiche */
+.specs.trois{grid-template-columns:repeat(3,1fr)}
+.actions{display:flex;gap:10px;flex-wrap:wrap}
+.carte.fiche{grid-column:1/-1}
+.carte.fiche h2{font-size:1.6rem}
+.galerie2{display:grid;grid-template-columns:1fr;gap:12px;margin-bottom:10px}
+@media(min-width:800px){.galerie2{max-width:760px}.fiche-specs{grid-template-columns:repeat(5,1fr)!important}}
+.tuile2{margin:0}
+.tuile2 .ph{display:block;width:100%;border:0;padding:0;border-radius:10px;background:#ecedef;cursor:zoom-in;overflow:hidden}
+.tuile2 .ph img{display:block;width:100%;height:auto}
+.tuile2 .ph.vide{aspect-ratio:16/5;display:grid;place-items:center;border:1.5px dashed var(--bord);background:#fff;color:var(--texte2);font-size:.8rem;cursor:default}
+.tuile2 figcaption{font-size:.8rem;color:var(--texte2);margin-top:4px}
+dd.vide{color:var(--texte2);font-weight:400;font-style:italic}
+#lb{position:fixed;inset:0;background:rgba(0,0,0,.92);display:grid;place-items:center;z-index:100;padding:16px;cursor:zoom-out}
+#lb img{max-width:100%;max-height:88vh;border-radius:8px}
+#lb button{position:absolute;top:calc(12px + env(safe-area-inset-top,0px));right:16px;width:42px;height:42px;border:0;border-radius:50%;background:#fff;color:#111;font-size:1.7rem;line-height:1;cursor:pointer}
+
+/* Visionneuse verticale */
+#lb{display:block;padding:0;cursor:default}
+#lb .pile{height:100%;overflow-y:auto;scroll-snap-type:y mandatory;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+#lb figure{height:100%;margin:0;scroll-snap-align:center;scroll-snap-stop:always;display:grid;place-items:center;padding:64px 12px}
+#lb img{max-width:100%;max-height:100%;object-fit:contain;border-radius:8px}
+#lb .x{z-index:2}
+#lb .cpt{position:absolute;z-index:2;top:calc(22px + env(safe-area-inset-top,0px));left:16px;color:#fff;font-size:.95rem;font-weight:600}
+
+/* Cartes « affiche » */
+.carte.affiche{padding:0;overflow:hidden}
+.photo{position:relative}
+.photo img{display:block;width:100%;height:auto}
+.photo .vignette{margin:0;border-radius:0;aspect-ratio:4/3}
+.legende{position:absolute;left:0;right:0;bottom:0;padding:56px 18px 16px;color:#fff;background:linear-gradient(to top,rgba(10,29,51,.88),rgba(10,29,51,0))}
+.legende h3{color:#fff;font-size:1.4rem;font-weight:700;line-height:1.15;letter-spacing:.02em;text-transform:uppercase}
+.legende span{display:block;font-size:.85rem;opacity:.85;margin-top:2px}
+.infos{padding:16px 18px 18px}
+.carte.affiche .infos p{margin:0 0 6px}
+.infos .fait{font-weight:600;color:var(--encre)}
+.infos .apartir{color:var(--texte2)}
+.infos .apartir b{color:var(--encre)}
+.infos .dispo{font-size:.85rem;color:var(--texte2);margin-bottom:14px!important}
+.infos .actions{margin-top:2px}
+
+/* Yachts : carte « affiche » */
+.carte.yc{padding:0;overflow:hidden}
+.poster{position:relative;display:block;width:100%;padding:0;border:0;background:none;cursor:pointer;text-align:left;color:#fff;font:inherit}
+.poster img{display:block;width:100%;height:auto}
+.sans{display:block;width:100%;aspect-ratio:3/2;background:linear-gradient(135deg,#1c3556,#0a1d33)}
+.legende{position:absolute;left:0;right:0;bottom:0;padding:56px 18px 16px;display:grid;gap:2px;text-align:left;color:#fff;background:linear-gradient(to top,rgba(10,29,51,.9),rgba(10,29,51,0));pointer-events:none}
+.legende small{font-size:.74rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;opacity:.85}
+.legende b{font-size:1.75rem;line-height:1.1;font-weight:800;letter-spacing:.02em;text-transform:uppercase}
+.legende b span{display:inline;font-size:1em;font-weight:400;opacity:.9}
+.pied{padding:14px 18px 18px}
+.fiche{grid-column:1/-1}
+.fiche>.btn{margin-bottom:14px}
+.fiche .info{margin-top:18px}
+.tuile2 .ph{position:relative;text-align:left}
+.tuile2 .ph.affiche-vide{padding:0;border:0;cursor:default;overflow:hidden;background:none}
+
+.fiche .info .titre-int{margin-top:24px;margin-bottom:8px}
+.fiche .info .titre-int:first-child{margin-top:0}
+
+/* Accueil : grande photo pleine largeur */
+.photo-pleine img{display:block;width:100%;height:auto;max-height:78vh;object-fit:cover;object-position:50% 65%}
+.photo-pleine+.hero{padding-top:28px}
+
+/* Fiche yacht : photos pleine largeur + panneau du bas */
+body.fiche-ouverte #sec-flotte{padding-top:0}
+.fiche{margin-inline:-20px;padding-bottom:170px;grid-column:1/-1}
+.gal{position:relative;max-width:760px;margin-inline:auto}
+.gal #retour{position:fixed;top:calc(var(--hh,64px) + 10px);left:12px;z-index:6;margin:0;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.28)}
+.galerie2{gap:2px;background:#0a1d33;margin:0;max-width:none}
+.tuile2 .ph{border-radius:0}
+.feuille{position:fixed;left:0;right:0;bottom:0;z-index:30;background:#fff;border-radius:18px 18px 0 0;box-shadow:0 -8px 28px rgba(10,29,51,.24);display:flex;flex-direction:column;max-height:82vh;padding-bottom:env(safe-area-inset-bottom,0px)}
+.feuille.ouverte{height:82vh}
+.feuille .poignee{display:flex;align-items:center;justify-content:center;gap:8px;flex:none;width:calc(100% - 36px);margin:12px 18px 10px;padding:11px 14px;border:1.5px solid var(--accent);border-radius:999px;background:#fff;color:var(--accent);font:700 .95rem Inter,system-ui,sans-serif;cursor:pointer;animation:pulse 2.2s ease-in-out 3}
+.feuille .poignee .fl-ch{font-style:normal;font-size:.8rem}
+.feuille.ouverte .poignee{animation:none}
+@keyframes pulse{0%,100%{background:#fff;color:var(--accent)}50%{background:var(--accent);color:#fff}}
+.feuille .fl{flex:none;display:flex;align-items:center;gap:12px;padding:0 18px 14px}
+.feuille .ft{flex:1;min-width:0;border:0;background:none;text-align:left;cursor:pointer;font:inherit;color:var(--encre);padding:0}
+.feuille .ft small{display:block;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--texte2)}
+.feuille .ft b{display:block;font-size:1.2rem;line-height:1.25}
+.feuille .ft span{display:block;font-size:.9rem;color:var(--texte2)}
+.feuille .fl .btn{padding:12px 20px;white-space:nowrap}
+.feuille .fc{flex:1;overflow-y:auto;padding:4px 18px 28px;border-top:1px solid var(--bord);overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+.fc .titre-int{margin:22px 0 8px}
+.fc .titre-int:first-child{margin-top:14px}
+@media(min-width:800px){.feuille{left:50%;right:auto;width:760px;transform:translateX(-50%)}}
+
+/* Accueil : titre doré sur la photo */
+.photo-pleine{position:relative}
+.photo-pleine::after{content:"";position:absolute;left:0;right:0;bottom:0;height:58%;background:linear-gradient(to top,rgba(8,24,45,.86) 0%,rgba(8,24,45,.55) 48%,rgba(8,24,45,0) 100%);pointer-events:none}
+.photo-pleine .titre-photo{position:absolute;z-index:2;left:18px;bottom:16px;margin:0;max-width:50%;color:#f0c55a;font-size:1.6rem;line-height:1.12;font-weight:800;letter-spacing:.01em;text-shadow:0 2px 12px rgba(0,0,0,.6)}
+@media(min-width:800px){.photo-pleine .titre-photo{left:max(24px,calc(50% - 480px));bottom:38px;max-width:none;font-size:3.1rem}}
+
+/* Lignes de réservation : durée sur une seule ligne */
+.ligne .nom{white-space:nowrap}
+.ligne .prix{white-space:nowrap}
+@media(max-width:430px){.ligne{gap:10px}.ligne .nom,.ligne .prix{font-size:.95rem}.ligne a{padding:9px 14px}}
+
+/* Offres des yachts */
+.offre{border:1px solid var(--bord);border-radius:12px;padding:14px 16px 4px;margin:12px 0}
+.offre .oh{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.offre .oh b{font-size:1.05rem}
+.offre .oh span{font-size:.8rem;color:var(--texte2);text-align:right}
+.offre p{margin:6px 0 10px}
+.offre .ligne{padding:10px 0 12px}
+.offre .ligne .nom{white-space:normal}

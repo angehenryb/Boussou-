@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Connexion – Boussou</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body>
+<header><div class="wrap barre"><a class="logo" href="index.html">Boussou</a><button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button><nav id="nav" aria-label="Navigation principale"><a href="index.html">Accueil</a><a href="flotte.html">Flotte</a><a href="meteo.html">Météo</a><a href="carte.html">Carte</a><a href="infos.html">Infos pratiques</a><a href="contact.html">Contact</a><a id="lien-compte" class="actif" href="connexion.html">Connexion</a></nav></div></header>
+<div class="barre-h"><span>Jet-skis : 9 h – 17 h</span><span>Yachts : disponibles à tout moment</span></div>
+<main>
+<div class="wrap hero petit"><h1>Connexion</h1><p class="sub">Connectez-vous ou créez un compte pour retrouver vos demandes de réservation.</p></div>
+<section><div class="wrap etroit">
+  <div class="onglets" role="tablist"><button type="button" id="t-in" aria-selected="true">Se connecter</button><button type="button" id="t-up" aria-selected="false">Créer un compte</button></div>
+  <form id="f-auth">
+    <div class="champ" id="c-nom" hidden><label for="a-nom">Votre nom</label><input id="a-nom" autocomplete="name"></div>
+    <div class="champ" id="c-tel" hidden><label for="a-tel">Téléphone / WhatsApp</label><input id="a-tel" type="tel" autocomplete="tel"></div>
+    <div class="champ"><label for="a-mail">E-mail</label><input id="a-mail" type="email" required autocomplete="email"></div>
+    <div class="champ"><label for="a-mdp">Mot de passe</label><input id="a-mdp" type="password" required minlength="6" autocomplete="current-password"></div>
+    <p id="a-msg" class="verdict" role="alert" hidden></p>
+    <button class="btn grand" id="a-ok" type="submit">Se connecter</button>
+  </form>
+</div></section>
+</main>
+<footer>© 2026 Boussou · Location de jet-skis et de yachts</footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="script.js"></script>
+<script src="compte.js"></script>
+</body></html>
